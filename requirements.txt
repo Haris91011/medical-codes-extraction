@@ -1,0 +1,8 @@
+pydantic-settings
+python-dotenv
+pyodbc
+streamlit
+langchain
+requests
+langchain_community
+openai
