@@ -38,29 +38,26 @@
 
 # app/core/config.py
 
-import toml
+import streamlit as st
 from pydantic import BaseModel
 
 class Settings(BaseModel):
     """
     This Settings class is designed to load and manage configuration variables
-    from a secrets.toml file using Pydantic's BaseModel.
+    from Streamlit Cloud's st.secrets.
     """
 
-    # Load secrets from the secrets.toml file
-    secrets = toml.load("secrets.toml")
-
     # Define your environment variables
-    MSSQL_SERVER: str = secrets["database"]["mssql_server"]
-    MSSQL_DATABASE: str = secrets["database"]["mssql_database"]
-    MSSQL_USER: str = secrets["database"]["mssql_user"]
-    MSSQL_PASSWORD: str = secrets["database"]["mssql_password"]
-    OPENAI_API_KEY: str = secrets["api"]["openai_api_key"]
-    DB_HOST: str = secrets["database"]["db_host"]
-    DB_USER: str = secrets["database"]["db_user"]
-    DB_PASSWORD: str = secrets["database"]["db_password"]
-    DB_NAME: str = secrets["database"]["db_name"]
-
+    MSSQL_SERVER: str = st.secrets["database"]["mssql_server"]
+    MSSQL_DATABASE: str = st.secrets["database"]["mssql_database"]
+    MSSQL_USER: str = st.secrets["database"]["mssql_user"]
+    MSSQL_PASSWORD: str = st.secrets["database"]["mssql_password"]
+    OPENAI_API_KEY: str = st.secrets["api"]["openai_api_key"]
+    DB_HOST: str = st.secrets["database"]["db_host"]
+    DB_USER: str = st.secrets["database"]["db_user"]
+    DB_PASSWORD: str = st.secrets["database"]["db_password"]
+    DB_NAME: str = st.secrets["database"]["db_name"]
 
 # Create an instance of the settings
 settings = Settings()
+
