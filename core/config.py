@@ -48,11 +48,11 @@ class Settings(BaseModel):
     """
 
     # Define your environment variables
-    MSSQL_SERVER: str = st.secrets["database"]["mssql_server"]
-    MSSQL_DATABASE: str = st.secrets["database"]["mssql_database"]
-    MSSQL_USER: str = st.secrets["database"]["mssql_user"]
-    MSSQL_PASSWORD: str = st.secrets["database"]["mssql_password"]
-    OPENAI_API_KEY: str = st.secrets["api"]["openai_api_key"]
+    MSSQL_SERVER: str = st.secrets["MSSQL_SERVER"]
+    MSSQL_DATABASE: str = st.secrets["MSSQL_DATABASE"]
+    MSSQL_USER: str = st.secrets["MSSQL_USER"]
+    MSSQL_PASSWORD: str = st.secrets["MSSQL_PASSWORD"]
+    OPENAI_API_KEY: str = st.secrets["OPENAI_API_KEY"]
     # DB_HOST: str = st.secrets["database"]["db_host"]
     # DB_USER: str = st.secrets["database"]["db_user"]
     # DB_PASSWORD: str = st.secrets["database"]["db_password"]
