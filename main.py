@@ -94,10 +94,8 @@ st.markdown(
     }
     
     .title-container {
-        # position: fixed;
         top: 20px;
         left: 50%;
-        # transform: translateX(-50%);
         z-index: 998;
         width: 100%;
         text-align: center;
