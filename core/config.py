@@ -53,10 +53,10 @@ class Settings(BaseModel):
     MSSQL_USER: str = st.secrets["database"]["mssql_user"]
     MSSQL_PASSWORD: str = st.secrets["database"]["mssql_password"]
     OPENAI_API_KEY: str = st.secrets["api"]["openai_api_key"]
-    DB_HOST: str = st.secrets["database"]["db_host"]
-    DB_USER: str = st.secrets["database"]["db_user"]
-    DB_PASSWORD: str = st.secrets["database"]["db_password"]
-    DB_NAME: str = st.secrets["database"]["db_name"]
+    # DB_HOST: str = st.secrets["database"]["db_host"]
+    # DB_USER: str = st.secrets["database"]["db_user"]
+    # DB_PASSWORD: str = st.secrets["database"]["db_password"]
+    # DB_NAME: str = st.secrets["database"]["db_name"]
 
 # Create an instance of the settings
 settings = Settings()
